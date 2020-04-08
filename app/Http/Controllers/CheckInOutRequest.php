@@ -5,7 +5,6 @@ use App\Exceptions\CheckoutNotAllowed;
 use App\Models\Asset;
 use App\Models\Location;
 use App\Models\User;
-use App\Console\Commands;
 
 trait CheckInOutRequest
 {
@@ -40,7 +39,6 @@ trait CheckInOutRequest
         {
             case 'location':
                 $asset->location_id = $target->id;
-                Command::SyncAssetLocations();
                 break;
             case 'asset':
                 $asset->location_id = $target->rtd_location_id;
