@@ -26,7 +26,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('snipeit:backup')->weekly();
         $schedule->command('backup:clean')->daily();
         $schedule->command('snipeit:upcoming-audits')->daily();
-        $schedule->command('snipeit:snipeit:sync-asset-locations')->everyFiveMinutes();;
+        $schedule->command('snipeit:snipeit:sync-asset-locations')->everyFiveMinutes();
     }
 
     protected function commands()
